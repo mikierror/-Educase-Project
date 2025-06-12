@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🔐 PopX User Authentication App
 
 A responsive, modern user authentication interface built with **React**, **React Router**, **TailwindCSS**, and **Vite**. This project includes functionality for account creation, login validation using `localStorage`, and dynamic user profile rendering.
@@ -8,11 +8,6 @@ A responsive, modern user authentication interface built with **React**, **React
 ## 📸 Preview![Vite + React - Google Chrome 6_12_2025 5_58_21 PM](https://github.com/user-attachments/assets/38edd9f5-528f-4cd2-99b4-af2fffdf2f6f)![Vite + React - Google Chrome 6_12_2025 5_56_57 PM](https://github.com/user-attachments/assets/e74e1725-e4c1-4f87-8fa1-020a04191ae3)![Vite + React - Google Chrome 6_12_2025 5_56_43 PM](https://github.com/user-attachments/assets/f6ef8b2a-b986-43e8-a2fa-e176b96f9fbe)
 
 
-
-
-*(Replace this with your app screenshot)*
-
----
 
 ## 📁 Project Structure
 
@@ -27,9 +22,6 @@ src/
 ├── App.jsx
 └── main.jsx
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -74,9 +66,7 @@ Edit
 "autoprefixer": "^10.4.17",
 "postcss": "^8.4.33"
 🧪 How to Run Locally
-bash
-Copy
-Edit
+
 # Clone the repo
 git clone https://github.com/mikierror/-Educase-Project.git
 
@@ -118,17 +108,9 @@ Managed user state with form-controlled components
 Made with ❤️ by Suryansh Kaintura
 Feel free to connect on LinkedIn or drop a ⭐ on this repo!
 
-yaml
-Copy
-Edit
-
 ---
 
 Would you like me to generate this `README.md` as a downloadable file? Or push it directly to your repo with instructions?
-
-
-
-
 
 
 
