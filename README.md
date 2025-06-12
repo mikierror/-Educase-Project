@@ -1,12 +1,21 @@
-# React + Vite
+# PopX Auth UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based authentication UI with signup, login, and profile page using localStorage. Built with Vite + TailwindCSS.
 
-Currently, two official plugins are available:
+## Features
+- Signup page with form validation
+- Login with credential verification
+- Profile page displaying dynamic user data
+- Fully responsive for mobile (390x844)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React (Vite)
+- TailwindCSS
+- React Router
+- LocalStorage for temporary data storage
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev

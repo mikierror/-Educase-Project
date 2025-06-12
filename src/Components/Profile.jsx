@@ -5,21 +5,19 @@ const Profile = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
-    setUser(storedUser);
+    if (typeof window !== 'undefined') {
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+      setUser(storedUser);
+    }
   }, []);
 
   return (
     <div className="w-[390px] h-[844px] border border-zinc-300 bg-gray-50 overflow-y-auto shadow-xl rounded-xl">   
-
       <div className='h-15 p-3 border-b border-gray-300'>
-        <h3 className="text-[19px] text-gray-900 mb-5 pb-3">
-          Account Settings
-        </h3>
+        <h3 className="text-[19px] text-gray-900 mb-5 pb-3">Account Settings</h3>
       </div>
 
       <div className="flex flex-col gap-4 mt-2 p-4">
-     
         <div className="flex gap-4 items-center">
           <div className='relative'>
             <img
@@ -32,12 +30,8 @@ const Profile = () => {
             </span>
           </div>
           <div className="-mt-2">
-            <p className="text-sm font-bold text-gray-900">
-              {user?.fullName || 'Marry Doe'}
-            </p>
-            <p className="text-[13px] font-medium text-gray-600">
-              {user?.email || 'Marry@Gmail.com'}
-            </p>
+            <p className="text-sm font-bold text-gray-900">{user?.fullName || 'Marry Doe'}</p>
+            <p className="text-[13px] font-medium text-gray-600">{user?.email || 'marry@gmail.com'}</p>
           </div>
         </div>
 

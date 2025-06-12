@@ -12,7 +12,8 @@ function SignupPage() {
     isAgency: '',
   });
 
-  let navigate = useNavigate()
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -31,11 +32,12 @@ function SignupPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
-    // navigate....
-    navigate(`/Login`)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('user', JSON.stringify(formData));
+    }
 
-    // reset form
+    navigate('/Login');
+
     setFormData({
       id: Math.floor(Math.random() * 100),
       fullName: '',
@@ -56,9 +58,7 @@ function SignupPage() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 h-[86%]">
         {/* Full Name */}
         <div className="relative">
-          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">
-            Full Name<span className="text-red-500">*</span>
-          </label>
+          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">Full Name<span className="text-red-500">*</span></label>
           <input
             type="text"
             name="fullName"
@@ -72,9 +72,7 @@ function SignupPage() {
 
         {/* Phone Number */}
         <div className="relative">
-          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">
-            Phone number<span className="text-red-500">*</span>
-          </label>
+          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">Phone number<span className="text-red-500">*</span></label>
           <input
             type="tel"
             name="phoneNumber"
@@ -88,9 +86,7 @@ function SignupPage() {
 
         {/* Email */}
         <div className="relative">
-          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">
-            Email address<span className="text-red-500">*</span>
-          </label>
+          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">Email address<span className="text-red-500">*</span></label>
           <input
             type="email"
             name="email"
@@ -104,9 +100,7 @@ function SignupPage() {
 
         {/* Password */}
         <div className="relative">
-          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">
-            Password<span className="text-red-500">*</span>
-          </label>
+          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">Password<span className="text-red-500">*</span></label>
           <input
             type="password"
             name="password"
@@ -120,9 +114,7 @@ function SignupPage() {
 
         {/* Company Name */}
         <div className="relative">
-          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">
-            Company name
-          </label>
+          <label className="text-sm text-[#6C25FF] absolute ml-2 bg-gray-100 px-2">Company name</label>
           <input
             type="text"
             name="companyName"
@@ -135,9 +127,7 @@ function SignupPage() {
 
         {/* Agency Radio */}
         <div className="mt-2">
-          <p className="text-sm font-medium text-gray-700 mb-2">
-            Are you an Agency?<span className="text-red-500">*</span>
-          </p>
+          <p className="text-sm font-medium text-gray-700 mb-2">Are you an Agency?<span className="text-red-500">*</span></p>
           <div className="flex gap-6 items-center">
             <label className="flex items-center gap-2">
               <input
@@ -166,10 +156,7 @@ function SignupPage() {
         </div>
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full h-fit mt-63 bg-[#6C25FF] text-white py-3 rounded-md text-sm font-medium hover:bg-purple-700 transition"
-        >
+        <button type="submit" className="w-full h-fit bg-[#6C25FF] text-white py-3 rounded-md text-sm font-medium hover:bg-purple-700 transition mt-63">
           Create Account
         </button>
       </form>
